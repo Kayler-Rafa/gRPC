@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package mensageria;
+
+// Serviço que define o envio de mensagens
+service MensageriaService {
+  // Envia uma mensagem e retorna uma confirmação
+  rpc EnviarMensagem (MensagemRequest) returns (MensagemResponse) {}
+}
+
+// Estrutura da mensagem de solicitação
+message MensagemRequest {
+  string mensagem = 1;
+  string destinatario = 2;
+}
+
+// Estrutura da resposta com status
+message MensagemResponse {
+  string status = 1;
+}
