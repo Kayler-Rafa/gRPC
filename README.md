@@ -18,7 +18,7 @@ Este projeto é uma implementação simples de um serviço de mensageria remota 
 - **gRPC para Python**: Instale as dependências necessárias executando:
   ```bash
   pip install grpcio grpcio-tools
-  }}}
+  ```
 
 ### Passo a Passo
 
@@ -26,25 +26,25 @@ Este projeto é uma implementação simples de um serviço de mensageria remota 
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
-   }}}
+   ```
 
 2. **Gerar os arquivos Python a partir do `.proto`**:
    Execute o seguinte comando para gerar os arquivos `mensageria_pb2.py` e `mensageria_pb2_grpc.py`:
    ```bash
    python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. mensageria.proto
-   }}}
+   ```
 
 3. **Iniciar o servidor**:
    Em um terminal, execute o servidor gRPC:
    ```bash
    python mensageria_server.py
-   }}}
+   ```
 
 4. **Executar o cliente**:
    Em outro terminal, execute o cliente gRPC para enviar uma mensagem:
    ```bash
    python mensageria_client.py
-   }}}
+   ```
 
    O cliente enviará uma mensagem ao servidor e receberá uma resposta de confirmação.
 
@@ -69,7 +69,7 @@ message MensagemRequest {
 message MensagemResponse {
   string status = 1;
 }
-}}}
+```
 
 ### Exemplo de Uso
 
